@@ -1,27 +1,8 @@
 # JustNote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Create New Note](https://user-images.githubusercontent.com/30574971/118547788-2a15e000-b777-11eb-9986-2833182cbd12.JPG)
+![custom labels](https://user-images.githubusercontent.com/30574971/118547796-2b470d00-b777-11eb-91ca-f6ea4d2d14bc.JPG)
+![Dashboard](https://user-images.githubusercontent.com/30574971/118547801-2bdfa380-b777-11eb-96ec-707121d481c7.JPG)
+![different View](https://user-images.githubusercontent.com/30574971/118547803-2c783a00-b777-11eb-89ea-f574ff92c41a.JPG)
+![trash with recover feature](https://user-images.githubusercontent.com/30574971/118547804-2d10d080-b777-11eb-8fb5-e345e5878b7c.JPG)
