@@ -1,0 +1,2 @@
+# JustNote
+NotePad desktop application
