@@ -1,0 +1,43 @@
+.text-area {
+  width: 400px;
+  margin: 10px 0 10px 0;
+  display: block;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+}
+
+.title {
+  height: 30px;
+  font-size: 1.5em;
+}
+
+.content {
+  height: 300px;
+  font-size: 1em;
+}
+
+.title-heading {
+  width: 80%;
+}
+
+.close-button {
+  height: 15px;
+  width: 15px;
+  float: right;
+  cursor: pointer;
+}
+
+.action {
+  margin: 5px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.dialog {
+  box-shadow: 0 10px 6px -6px #777;
+}

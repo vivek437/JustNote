@@ -1,0 +1,48 @@
+<mat-icon
+  class="close-button"
+  mat-mini-fab
+  color="primary"
+  matTooltip="Close"
+  (click)="onClose()"
+  >cancel</mat-icon
+>
+
+<input
+  matInput
+  *ngIf="note.label==='reminder'"
+  [(ngModel)]="note.time"
+  type="datetime-local"
+/>
+
+<ng-template [ngIf]="!note.isDeleted">
+  <textarea
+    maxlength="15"
+    rows="1"
+    cols="1"
+    [(ngModel)]="note.title"
+    class="text-area title"
+    placeholder="Enter Title.."
+  ></textarea>
+  <mat-divider></mat-divider>
+  <textarea
+    [(ngModel)]="note.content"
+    class="text-area content"
+    placeholder="Type Content.."
+  ></textarea>
+</ng-template>
+
+<ng-template [ngIf]="note.isDeleted">
+  <p name="title" class="text-area title">{{note.title}}</p>
+  <mat-divider></mat-divider>
+  <p class="text-area content">{{note.content}}</p>
+</ng-template>
+
+<app-note-action
+  fxLayout="row"
+  [editorNote]="note"
+  [label]="note.label"
+  layout="row"
+  (closeEmitter)="onClose()"
+  (clearEmitter)="onClear()"
+>
+</app-note-action>

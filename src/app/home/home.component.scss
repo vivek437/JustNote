@@ -1,0 +1,66 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  margin: 0 0 0 10px;
+}
+
+.mat-expansion-panel-header {
+  padding: 10px;
+}
+
+.drawer-container {
+  width: 100%;
+  height: 90%;
+
+  .drawer {
+    border-radius: 20px;
+    margin: 20px;
+    overflow: auto;
+  }
+
+  .action-card {
+    height: 90%;
+    min-width: 300px;
+    padding: 10px;
+  }
+
+  .actions {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0 5px 0;
+    display: block;
+    text-align: left;
+  }
+
+  .action-active {
+    border-radius: 20px;
+    border-left: 10px solid #3f51b5;
+    background-color: #e8eaf6;
+  }
+
+  .labels {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0 5px 0;
+    display: block;
+    text-align: left;
+  }
+}
+.label-active {
+  border-radius: 20px;
+  border-left: 10px solid #3f51b5;
+  background-color: #e8eaf6;
+}
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: transparent !important;
+}
+
+.create-label {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  justify-content: center;
+  padding: 20px;
+}

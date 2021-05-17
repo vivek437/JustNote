@@ -1,0 +1,73 @@
+<div *ngIf="editorNote" fxLayout="{{ layout }}" fxLayoutGap="10px">
+  <button
+    mat-mini-fab
+    color="primary"
+    *ngIf="!editorNote.isDeleted"
+    matTooltip="Clear"
+    (click)="clearEditor()"
+  >
+    <mat-icon>rate_review</mat-icon>
+  </button>
+  <button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Recover"
+    *ngIf="editorNote.isDeleted"
+    (click)="recycle(editorNote)"
+  >
+    <mat-icon>restore</mat-icon>
+  </button>
+
+  <button
+    mat-mini-fab
+    color="primary"
+    *ngIf="!editorNote.isNew"
+    matTooltip="Delete"
+    (click)="deleteNote(editorNote)"
+  >
+    <mat-icon>delete_forever</mat-icon>
+  </button>
+  <button
+    mat-mini-fab
+    color="primary"
+    *ngIf="!editorNote.isNew && !editorNote.isDeleted"
+    matTooltip="Clone"
+    (click)="cloneNote(editorNote)"
+  >
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <button [matMenuTriggerFor]="menu"
+    mat-mini-fab
+    color="primary"
+    matTooltip="Move"
+    *ngIf="
+      !editorNote.isNew &&
+      !editorNote.isDeleted
+    "
+  >
+    <mat-icon> archive </mat-icon>
+  </button>
+
+  <button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Save Changes"
+    (click)="updateNote(editorNote)"
+    *ngIf="!editorNote.isDeleted"
+  >
+    <mat-icon>save</mat-icon>
+  </button>
+  <button
+    mat-mini-fab
+    color="primary"
+    matTooltip="Download"
+    (click)="onDownload(editorNote)"
+  >
+    <mat-icon>get_app</mat-icon>
+  </button>
+</div>
+
+<mat-menu #menu="matMenu" yPosition="below">
+  <button mat-menu-item *ngFor="let label of allLabels" (click)="moveNote(editorNote,label)">#{{label}}
+  </button>
+</mat-menu>

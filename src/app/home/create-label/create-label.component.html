@@ -1,0 +1,43 @@
+<div style="width: 200px" fxLayoutGap="10px">
+  <h3>Create New</h3>
+  <mat-form-field hintLabel="Max 15 characters" appearance="fill">
+    <mat-label>Enter Label*</mat-label>
+    <input
+      matInput
+      [formControl]="labelFormControl"
+      [errorStateMatcher]="matcher"
+      maxlength="15"
+      #input
+      autocomplete="off"
+    />
+    <mat-hint align="end">{{ input.value?.length || 0 }}/15</mat-hint>
+  </mat-form-field>
+  <mat-error color="primary" *ngIf="labelFormControl.hasError('required')">
+    *Required
+  </mat-error>
+  <mat-error
+    color="primary"
+    *ngIf="labelFormControl.hasError('forbiddenLabel')"
+  >
+    *Duplicate Label
+  </mat-error>
+  <mat-divider></mat-divider>
+  <button
+    mat-icon-button
+    color="primary"
+    (click)="onClose()"
+    matTooltip="Close"
+  >
+    <mat-icon>cancel</mat-icon>
+  </button>
+  <button
+    color="primary"
+    mat-icon-button
+    class="done-button"
+    *ngIf="!labelFormControl.hasError('forbiddenLabel')"
+    (click)="onSave()"
+    matTooltip="Save"
+  >
+    <mat-icon> done</mat-icon>
+  </button>
+</div>

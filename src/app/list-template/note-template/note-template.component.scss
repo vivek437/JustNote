@@ -1,0 +1,202 @@
+.title {
+  color: #000;
+  margin-left: 100px;
+  padding-top: 20px;
+  outline: none;
+  height: 40px;
+  font-size: 15px;
+  overflow: hidden;
+  max-width: 120px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content {
+  color: #000;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 5px;
+  outline: none;
+  padding: 10px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  height: 160px;
+  overflow: hidden;
+  max-width: 80%;
+  overflow: auto;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content:hover {
+  overflow: auto;
+}
+
+.shape-0,
+.shape-1,
+.shape-2,
+.shape-3,
+.shape-4,
+.shape-5,
+.shape-6,
+.shape-7,
+.shape-8,
+.shape-9,
+.shape-10 {
+  color: #fff;
+  width: 310px;
+  height: 310px;
+  margin-top: 10px;
+  margin-left: 0 - 10px;
+  mix-blend-mode: multiply;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.shape-0 {
+  background: #fff59d;
+  border-radius: 30% 30% 40% 30%/20% 40% 40% 40%;
+}
+.shape-1 {
+  background: #ffcc80;
+  border-radius: 60% 30% 40% 30%/40%;
+}
+.shape-2 {
+  background: #ffab91;
+  border-radius: 40% 40% 40% 60%/40% 40% 60% 50%;
+}
+.shape-3 {
+  background: #f48fb1;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+.shape-4 {
+  background: #9fa8da;
+  border-radius: 50% 30% 50% 50%/50%;
+}
+.shape-5 {
+  background: #c5e1a5;
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+}
+.shape-6 {
+  background: #eeeeee;
+  border-radius: 50% 30% 40% 30%/40%;
+}
+.shape-7 {
+  background: #81d4fa;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+.shape-8 {
+  background: #bcaaa4;
+  border-radius: 50% 30% 50% 50%/50%;
+}
+.shape-9 {
+  background: #80cbc4;
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+}
+.shape-10 {
+  background: #e6ee9c;
+  border-radius: 30% 30% 40% 30%/20% 40% 40% 40%;
+}
+
+.rectangleTitle {
+  color: #000;
+  outline: none;
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 280px;
+  height: 40px;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.rectangleContent {
+  color: #000;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  outline: none;
+  overflow: hidden;
+  white-space: pre-wrap;
+  width: 280px;
+  height: 200px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.rectangleContent:hover {
+  overflow: auto;
+}
+
+.rectangle-0,
+.rectangle-1,
+.rectangle-2,
+.rectangle-3,
+.rectangle-4,
+.rectangle-5,
+.rectangle-6,
+.rectangle-7,
+.rectangle-8,
+.rectangle-9,
+.rectangle-10 {
+  border-radius: 10px;
+  outline: none;
+  margin: 10px;
+  width: 310px;
+  height: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.rectangle-0 {
+  background: #fff59d;
+}
+.rectangle-1 {
+  background: #ffcc80;
+}
+.rectangle-2 {
+  background: #ffab91;
+}
+.rectangle-3 {
+  background: #f48fb1;
+}
+.rectangle-4 {
+  background: #9fa8da;
+}
+.rectangle-5 {
+  background: #c5e1a5;
+}
+.rectangle-6 {
+  background: #eeeeee;
+}
+.rectangle-7 {
+  background: #81d4fa;
+}
+.rectangle-8 {
+  background: #bcaaa4;
+}
+.rectangle-9 {
+  background: #80cbc4;
+}
+.rectangle-10 {
+  background: #e6ee9c;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #ffd;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}

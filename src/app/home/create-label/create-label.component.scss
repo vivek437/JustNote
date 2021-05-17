@@ -1,0 +1,19 @@
+.text-area {
+  width: 150px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+}
+
+.title {
+  height: 30px;
+  font-size: 1.5em;
+}
+
+.done-button {
+  float: right;
+  cursor: pointer;
+}

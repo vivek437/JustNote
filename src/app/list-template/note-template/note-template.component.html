@@ -1,0 +1,22 @@
+<div
+  [className]="view ? cssStyleRectangles : cssStyleShapes"
+  (click)="openEditor()"
+>
+  <div
+    [className]="view ? rectangleTitle : title"
+    (blur)="saveNote()"
+    #titleDiv
+  >
+    <h2>{{ note.title }}</h2>
+  </div>
+  <div style="align-items: center; justify-content: center; display: flex">
+    <mat-divider style="width: 260px"></mat-divider>
+  </div>
+  <div
+    [className]="view ? rectangleContent : content"
+    (blur)="saveNote()"
+    #contentDiv
+  >
+    {{ note.content }}
+  </div>
+</div>

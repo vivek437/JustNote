@@ -1,0 +1,10 @@
+.editor-actions {
+  padding: 10px;
+  margin: 10px;
+}
+
+::ng-deep .mat-menu-panel {
+  height: 200px;
+  margin: 10px;
+  overflow-y: auto;
+}

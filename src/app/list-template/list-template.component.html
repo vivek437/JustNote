@@ -1,0 +1,65 @@
+<div class="options" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign=" center">
+  <button mat-mini-fab color="primary" (click)="changeLook()">
+    <mat-icon>view_quilt</mat-icon>
+  </button>
+  <button
+    mat-mini-fab
+    color="primary"
+    *ngIf="noteType !== 'trash'"
+    (click)="onCreate()"
+  >
+    <mat-icon>note_add</mat-icon>
+  </button>
+</div>
+
+<ng-container *ngIf="noteLook === 2; else list">
+  <div fxLayout="row" fxLayoutAlign="start start">
+    <div cdkDropList class="list" (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let note of notes | async" (click)="setEditor(note)" cdkDrag>
+        <div class="placeholder" *cdkDragPlaceholder></div>
+        <app-title-template [note]="note"></app-title-template>
+      </div>
+    </div>
+    <mat-card *ngIf="editorNote" class="editor mat-elevation-z8">
+      <textarea
+        rows="1"
+        cols="1"
+        maxlength="15"
+        [(ngModel)]="editorNote.title"
+        class="text-area title"
+        placeholder="Enter Title.."
+        (blur)="updateNote(editorNote)"
+      >
+      </textarea>
+      <mat-divider></mat-divider>
+      <textarea
+        [(ngModel)]="editorNote.content"
+        class="text-area content"
+        placeholder="Type Content.."
+        (blur)="updateNote(editorNote)"
+      >
+      </textarea>
+    </mat-card>
+
+    <app-note-action
+      style="margin: 20px"
+      *ngIf="editorNote"
+      [editorNote]="editorNote"
+      [label]="label"
+      layout="column"
+    ></app-note-action>
+  </div>
+</ng-container>
+
+<ng-template #list>
+  <div class="app">
+    <app-note-template
+      *ngFor="let note of notes | async; index as i"
+      [view]="noteLook"
+      [note]="note"
+      [label]="label"
+      id="{{ note.id }}"
+    >
+    </app-note-template>
+  </div>
+</ng-template>
