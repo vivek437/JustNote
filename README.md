@@ -1,6 +1,6 @@
 # JustNote
 
-This Angular Desktop application developed using angular and electron.
+This is Notepad Desktop application developed using angular and electron.
 
 Features:
 1. Create Notes
